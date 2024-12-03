@@ -27,3 +27,4 @@ parameters:
     value: "my-app"
   - name: IMAGE
     value: "my-image"
+
