@@ -6,22 +6,22 @@ objects:
   - apiVersion: apps/v1
     kind: Deployment
     metadata:
-      name: '${APPLICATION_NAME}'
+      name: '${APP_NAME}'
     spec:
       replicas: 1
       selector:
         matchLabels:
-          app: '${APPLICATION_NAME}'
+          app: '${APP_NAME}'
       template:
         metadata:
           labels:
-            app: '${APPLICATION_NAME}'
+            app: '${APP_NAME}'
         spec:
           containers:
-          - name: '${APPLICATION_NAME}'
+          - name: '${APP_NAME}'
             image: '${IMAGE}'
             ports:
-            - containerPort: 8080
+              - containerPort: 8080
 parameters:
   - name: APP_NAME
     value: my-app
