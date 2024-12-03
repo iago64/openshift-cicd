@@ -24,6 +24,4 @@ objects:
               - containerPort: 8080
 parameters:
   - name: APP_NAME
-    displayName: Application Name
-    description: The name for the application.
     value: my-app
