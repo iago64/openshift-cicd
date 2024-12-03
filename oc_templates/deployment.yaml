@@ -21,7 +21,7 @@ objects:
           - name: ${APP_NAME}
             image: ${IMAGE}
             ports:
-            - containerPort: 80
+            - containerPort: 8080
 parameters:
   - name: APP_NAME
     value: my-app
