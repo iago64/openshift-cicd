@@ -25,3 +25,5 @@ objects:
 parameters:
   - name: APP_NAME
     value: my-app
+  - name: IMAGE
+    value: test
