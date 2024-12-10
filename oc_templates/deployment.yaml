@@ -56,3 +56,5 @@ parameters:
     value: my-app
   - name: IMAGE
     value: test
+  - name: ROUTE_INSECURE_EDGE
+    value: 'Allow'
