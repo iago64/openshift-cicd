@@ -3,6 +3,35 @@ kind: Template
 metadata:
   name: my-app
 objects:
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      annotations: null
+      labels:
+        application: '${APP_NAME}'
+      name: '${APP_NAME}'
+    spec:
+      ports:
+        - port: 8080
+          targetPort: 8080
+      selector:
+        deployment: '${APP_NAME}'
+  - apiVersion: route.openshift.io/v1
+    kind: Route
+    metadata:
+      name: '${APP_NAME}'
+      labels:
+        app: '${APP_NAME}'
+    spec:
+      port:
+        targetPort: http
+      tls:
+        insecureEdgeTerminationPolicy: '${ROUTE_INSECURE_EDGE}'
+        termination: edge
+      to:
+        kind: Service
+        name: '${APP_NAME}'
+        weight: 100
   - apiVersion: apps/v1
     kind: Deployment
     metadata:
