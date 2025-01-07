@@ -50,16 +50,16 @@ objects:
             image: '${IMAGE}'
             env:
               - name: APP_USER
-                value: admin
+                value: '${ADMIN_USER}'
               - name: APP_PASS
-                value: admin
+                value: '${ADMIN_PASS}'
             ports:
               - containerPort: 8080
 parameters:
   - name: APP_NAME
-    value: my-app
+    value: my-app2
   - name: IMAGE
-    value: test
+    value: test2
   - name: ROUTE_INSECURE_EDGE
     value: 'Allow'
   - name: APP_USER
