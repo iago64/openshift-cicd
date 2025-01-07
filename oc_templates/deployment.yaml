@@ -50,9 +50,9 @@ objects:
             image: '${IMAGE}'
             env:
               - name: APP_USER
-                value: '${APP_USER}'
+                value: '${APP_NAME}'
               - name: APP_PASS
-                value: '${APP_PASS}'
+                value: '${APP_NAME}'
             resources:
               limits:
                 cpu: 500m
@@ -69,4 +69,8 @@ parameters:
     value: test2
   - name: ROUTE_INSECURE_EDGE
     value: 'Allow'
-    
+  - name: APP_USER
+    value: admin
+  - name: APP_PASS
+    value: admin
+  
