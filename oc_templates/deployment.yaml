@@ -50,14 +50,21 @@ objects:
             image: '${IMAGE}'
             env:
               - name: APP_USER
-                value: admin
+                value: '${APP_USER}'
               - name: APP_PASS
-                value: admin
+                value: '${APP_PASS}'
+            resources:
+              limits:
+                cpu: '1'
+                memory: 512Mi
+              requests:
+                cpu: 500m
+                memory: 256Mi
             ports:
               - containerPort: 8080
 parameters:
   - name: APP_NAME
-    value: my-app2
+    value: my-app
   - name: IMAGE
     value: test2
   - name: ROUTE_INSECURE_EDGE
