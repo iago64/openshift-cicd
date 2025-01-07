@@ -50,9 +50,9 @@ objects:
             image: '${IMAGE}'
             env:
               - name: APP_USER
-                value: '${ADMIN_USER}'
+                value: admin
               - name: APP_PASS
-                value: '${ADMIN_PASS}'
+                value: admin
             ports:
               - containerPort: 8080
 parameters:
