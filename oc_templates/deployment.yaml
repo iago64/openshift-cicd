@@ -69,8 +69,4 @@ parameters:
     value: test2
   - name: ROUTE_INSECURE_EDGE
     value: 'Allow'
-  - name: APP_USER
-    value: admin
-  - name: APP_PASS
-    value: admin
     
