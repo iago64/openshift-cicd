@@ -70,7 +70,7 @@ parameters:
   - name: ROUTE_INSECURE_EDGE
     value: 'Allow'
   - name: APP_USER
-    value: admin
+    value: '${APP_USER}'
   - name: APP_PASS
-    value: admin
+    value: '${APP_PASS}'
   
