@@ -14,7 +14,7 @@ objects:
         - port: 8080
           targetPort: 8080
       selector:
-        deployment: '${APP_NAME}'
+        app: '${APP_NAME}'
   - apiVersion: route.openshift.io/v1
     kind: Route
     metadata:
@@ -50,7 +50,7 @@ objects:
             image: '${IMAGE}'
             env:
               - name: APP_USER
-                value: sabri
+                value: '${APP_USER}'
               - name: APP_PASS
                 value: '${APP_NAME}'
             resources:
