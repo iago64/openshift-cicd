@@ -50,7 +50,7 @@ objects:
             image: '${IMAGE}'
             env:
               - name: APP_USER
-                value: '${APP_NAME}'
+                value: sabri
               - name: APP_PASS
                 value: '${APP_NAME}'
             resources:
