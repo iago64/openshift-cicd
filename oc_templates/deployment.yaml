@@ -1,7 +1,7 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 metadata:
-  name: my-app
+  name: my-sab
 objects:
   - apiVersion: v1
     kind: Service
